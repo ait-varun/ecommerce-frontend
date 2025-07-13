@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Star, ShoppingCart, Heart, Plus, Minus, Trash } from 'lucide-react';
 import { Product } from '@/types';
@@ -82,11 +83,13 @@ export default function ProductCard({ product, onProductClick }: ProductCardProp
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       onClick={handleCardClick}
     >
-      <div className="relative">
-        <img
+      <div className="relative h-48">
+        <Image
           src={product.image}
           alt={product.name}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
         />
         
         {/* Wishlist Button */}

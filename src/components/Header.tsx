@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
   Search, 
@@ -65,15 +66,15 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="/" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] px-3 py-2 rounded-md text-sm font-medium">
+              <Link href="/" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Home
-              </a>
-              <a href="/products" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link href="/products" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Products
-              </a>
-              <a href="/categories" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] px-3 py-2 rounded-md text-sm font-medium">
+              </Link>
+              <Link href="/categories" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] px-3 py-2 rounded-md text-sm font-medium">
                 Categories
-              </a>
+              </Link>
             </div>
           </nav>
 
@@ -126,12 +127,12 @@ export default function Header() {
                   <span className="hidden sm:block">{user?.name}</span>
                 </motion.button>
                 <div className="absolute right-0 mt-2 w-48 bg-[var(--color-surface)] rounded-md shadow-lg py-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <a href="/profile" className="block px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]">
+                  <Link href="/profile" className="block px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]">
                     Profile
-                  </a>
-                  <a href="/orders" className="block px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]">
+                  </Link>
+                  <Link href="/orders" className="block px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]">
                     Orders
-                  </a>
+                  </Link>
                   <button
                     onClick={handleLogout}
                     className="block w-full text-left px-4 py-2 text-sm text-[var(--color-text-primary)] hover:bg-[var(--color-primary-light)]"
@@ -174,15 +175,15 @@ export default function Header() {
             transition={{ duration: 0.2 }}
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
-              <a href="/" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] block px-3 py-2 rounded-md text-base font-medium">
+              <Link href="/" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] block px-3 py-2 rounded-md text-base font-medium">
                 Home
-              </a>
-              <a href="/products" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link href="/products" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] block px-3 py-2 rounded-md text-base font-medium">
                 Products
-              </a>
-              <a href="/categories" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] block px-3 py-2 rounded-md text-base font-medium">
+              </Link>
+              <Link href="/categories" className="text-[var(--color-text-primary)] hover:text-[var(--color-primary)] block px-3 py-2 rounded-md text-base font-medium">
                 Categories
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

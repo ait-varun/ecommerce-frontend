@@ -47,7 +47,7 @@ export default function Products() {
     let aValue = a[sortBy];
     let bValue = b[sortBy];
 
-    if (sortBy === 'name') {
+    if (sortBy === 'name' && typeof aValue === 'string' && typeof bValue === 'string') {
       aValue = aValue.toLowerCase();
       bValue = bValue.toLowerCase();
     }

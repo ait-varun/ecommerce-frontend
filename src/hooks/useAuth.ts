@@ -1,10 +1,16 @@
 import { useEffect, useState } from 'react';
 import { AuthService } from '@/services/authService';
-import { LoginData, SignupData } from '@/types';
+import { LoginData, SignupData, User } from '@/types';
 import { saveUserToStorage, loadUserFromStorage, removeFromLocalStorage, LOCAL_STORAGE_KEYS } from '@/utils/localStorage';
 
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
+
 export const useAuth = () => {
-  const [auth, setAuth] = useState({
+  const [auth, setAuth] = useState<AuthState>({
     user: null,
     isAuthenticated: false,
     isLoading: false
@@ -44,7 +50,7 @@ export const useAuth = () => {
       }
     } catch (error) {
       setAuth(prev => ({ ...prev, isLoading: false }));
-      return { success: false, error: 'Login failed' };
+      return { success: false, error: `Login failed: ${error}` };
     }
   };
 
@@ -68,7 +74,7 @@ export const useAuth = () => {
       }
     } catch (error) {
       setAuth(prev => ({ ...prev, isLoading: false }));
-      return { success: false, error: 'Signup failed' };
+      return { success: false, error: `Signup failed: ${error}` };
     }
   };
 

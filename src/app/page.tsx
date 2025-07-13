@@ -12,9 +12,8 @@ import CartDrawer from '@/components/CartDrawer';
 import { getCurrentTheme } from '@/config/themes';
 
 export default function Home() {
-  const { products, setProducts, filteredProducts, isLoginModalOpen, setIsLoginModalOpen, loginModalMode, setLoginModalMode } = useAppContext();
+  const { setProducts, filteredProducts, isLoginModalOpen, setIsLoginModalOpen, loginModalMode, setLoginModalMode } = useAppContext();
   const [loading, setLoading] = useState(true);
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const theme = getCurrentTheme();
 
   useEffect(() => {
@@ -28,7 +27,8 @@ export default function Home() {
   }, [setProducts]);
 
   const handleProductClick = (product: Product) => {
-    setSelectedProduct(product);
+    // TODO: Navigate to product detail page or open modal
+    console.log('Product clicked:', product);
   };
 
   return (

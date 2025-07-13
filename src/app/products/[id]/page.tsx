@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Star, ShoppingCart, Heart, ArrowLeft, Plus, Minus } from 'lucide-react';
 import { Product } from '@/types';
@@ -20,7 +21,6 @@ export default function ProductDetail() {
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
-  const [selectedImage, setSelectedImage] = useState(0);
   const [isLiked, setIsLiked] = useState(false);
 
   useEffect(() => {
@@ -121,10 +121,12 @@ export default function ProductDetail() {
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               >
-                <img
+                <Image
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </motion.div>
               
@@ -174,16 +176,16 @@ export default function ProductDetail() {
                   <span className="text-sm font-medium text-gray-700">Quantity:</span>
                   <div className="flex items-center space-x-2">
                     <button
-                      onClick={decrementQuantity}
-                      className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300"
+                    onClick={decrementQuantity}
+                      className="w-8 h-8 rounded-full bg-[var(--color-border-light)] flex items-center justify-center hover:bg-[var(--color-border-medium)]"
                       disabled={quantity <= 1}
                     >
                       <Minus className="w-4 h-4" />
                     </button>
                     <span className="w-12 text-center font-medium">{quantity}</span>
                     <button
-                      onClick={incrementQuantity}
-                      className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300"
+                    onClick={incrementQuantity}
+                      className="w-8 h-8 rounded-full bg-[var(--color-border-light)] flex items-center justify-center hover:bg-[var(--color-border-medium)]"
                       disabled={quantity >= product.stock}
                     >
                       <Plus className="w-4 h-4" />
@@ -196,8 +198,8 @@ export default function ProductDetail() {
                     onClick={handleAddToCart}
                     className={`flex-1 flex items-center justify-center space-x-2 py-3 px-6 rounded-md font-medium transition-colors ${
                       isInCart(product.id)
-                        ? 'bg-green-500 text-white hover:bg-green-600'
-                        : 'bg-blue-500 text-white hover:bg-blue-600'
+                        ? 'bg-[var(--color-success)] text-white hover:bg-[var(--color-success-hover)]'
+                        : 'bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)]'
                     }`}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
@@ -216,7 +218,7 @@ export default function ProductDetail() {
 
                   <motion.button
                     onClick={() => setIsLiked(!isLiked)}
-                    className="p-3 border-2 border-gray-300 rounded-md hover:border-red-500 transition-colors"
+                    className="p-3 border-2 border-[var(--color-border-medium)] rounded-md hover:border-[var(--color-error)] transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >

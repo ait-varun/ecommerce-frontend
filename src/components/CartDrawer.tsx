@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Trash } from 'lucide-react';
 import { useAppContext } from '@/contexts/AppContext';
@@ -46,11 +47,15 @@ export default function CartDrawer() {
                 <ul className="space-y-4">
                   {cart.map((item) => (
                     <li key={item.id} className="flex items-center">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-16 h-16 object-cover rounded-md mr-4"
-                      />
+                      <div className="relative w-16 h-16 mr-4">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          className="object-cover rounded-md"
+                          sizes="64px"
+                        />
+                      </div>
                       <div className="flex-1">
                         <h3 className="font-semibold text-gray-900">
                           {item.name}
