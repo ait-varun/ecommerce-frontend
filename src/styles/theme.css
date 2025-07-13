@@ -1,0 +1,129 @@
+:root {
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-primary-light: #EFF6FF;
+  --color-secondary: #8B5CF6;
+  --color-secondary-hover: #7C3AED;
+  --color-secondary-light: #F3E8FF;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  --color-success: #10B981;
+  --color-success-hover: #059669;
+  --color-warning: #F59E0B;
+  --color-warning-hover: #D97706;
+  --color-error: #EF4444;
+  --color-error-hover: #DC2626;
+  --color-background: #F9FAFB;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-light: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+  --color-border-light: #E5E7EB;
+  --color-border-medium: #D1D5DB;
+  --color-border-dark: #9CA3AF;
+}
+
+[data-theme="shopzen"] {
+  --color-primary: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-primary-light: #EFF6FF;
+  --color-secondary: #8B5CF6;
+  --color-secondary-hover: #7C3AED;
+  --color-secondary-light: #F3E8FF;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #D97706;
+  --color-success: #10B981;
+  --color-success-hover: #059669;
+  --color-warning: #F59E0B;
+  --color-warning-hover: #D97706;
+  --color-error: #EF4444;
+  --color-error-hover: #DC2626;
+  --color-background: #F9FAFB;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-light: #9CA3AF;
+  --color-text-inverse: #FFFFFF;
+  --color-border-light: #E5E7EB;
+  --color-border-medium: #D1D5DB;
+  --color-border-dark: #9CA3AF;
+}
+
+[data-theme="techmart"] {
+  --color-primary: #059669;
+  --color-primary-hover: #047857;
+  --color-primary-light: #ECFDF5;
+  --color-secondary: #0891B2;
+  --color-secondary-hover: #0E7490;
+  --color-secondary-light: #ECFEFF;
+  --color-accent: #DC2626;
+  --color-accent-hover: #B91C1C;
+  --color-success: #10B981;
+  --color-success-hover: #059669;
+  --color-warning: #F59E0B;
+  --color-warning-hover: #D97706;
+  --color-error: #EF4444;
+  --color-error-hover: #DC2626;
+  --color-background: #F0FDF4;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #064E3B;
+  --color-text-secondary: #047857;
+  --color-text-light: #6B7280;
+  --color-text-inverse: #FFFFFF;
+  --color-border-light: #D1FAE5;
+  --color-border-medium: #A7F3D0;
+  --color-border-dark: #6EE7B7;
+}
+
+[data-theme="luxeboutique"] {
+  --color-primary: #7C2D92;
+  --color-primary-hover: #581C87;
+  --color-primary-light: #FAF5FF;
+  --color-secondary: #BE185D;
+  --color-secondary-hover: #9D174D;
+  --color-secondary-light: #FDF2F8;
+  --color-accent: #D97706;
+  --color-accent-hover: #B45309;
+  --color-success: #10B981;
+  --color-success-hover: #059669;
+  --color-warning: #F59E0B;
+  --color-warning-hover: #D97706;
+  --color-error: #EF4444;
+  --color-error-hover: #DC2626;
+  --color-background: #FEFCFF;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #581C87;
+  --color-text-secondary: #7C2D92;
+  --color-text-light: #A855F7;
+  --color-text-inverse: #FFFFFF;
+  --color-border-light: #E9D5FF;
+  --color-border-medium: #C084FC;
+  --color-border-dark: #A855F7;
+}
+
+[data-theme="oceanblue"] {
+  --color-primary: #0369A1;
+  --color-primary-hover: #0284C7;
+  --color-primary-light: #F0F9FF;
+  --color-secondary: #0891B2;
+  --color-secondary-hover: #0E7490;
+  --color-secondary-light: #ECFEFF;
+  --color-accent: #F97316;
+  --color-accent-hover: #EA580C;
+  --color-success: #10B981;
+  --color-success-hover: #059669;
+  --color-warning: #F59E0B;
+  --color-warning-hover: #D97706;
+  --color-error: #EF4444;
+  --color-error-hover: #DC2626;
+  --color-background: #F0F9FF;
+  --color-surface: #FFFFFF;
+  --color-text-primary: #0C4A6E;
+  --color-text-secondary: #0369A1;
+  --color-text-light: #0891B2;
+  --color-text-inverse: #FFFFFF;
+  --color-border-light: #E0F2FE;
+  --color-border-medium: #BAE6FD;
+  --color-border-dark: #7DD3FC;
+}

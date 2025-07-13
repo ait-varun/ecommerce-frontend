@@ -1,26 +1,109 @@
 @import "tailwindcss";
+@import '../styles/theme.css';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Theme-aware utility classes */
+.btn-primary {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.btn-secondary {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+  background-color: var(--color-secondary);
+  color: var(--color-text-inverse);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+.btn-success {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+  background-color: var(--color-success);
+  color: var(--color-text-inverse);
+}
+
+.btn-success:hover {
+  background-color: var(--color-success-hover);
+}
+
+.btn-error {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+  background-color: var(--color-error);
+  color: var(--color-text-inverse);
+}
+
+.btn-error:hover {
+  background-color: var(--color-error-hover);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-background {
+  background-color: var(--color-background);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-primary {
+  color: var(--color-text-primary);
+}
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-light {
+  color: var(--color-text-light);
+}
+
+.text-inverse {
+  color: var(--color-text-inverse);
+}
+
+.border-light {
+  border-color: var(--color-border-light);
+}
+
+.border-medium {
+  border-color: var(--color-border-medium);
+}
+
+.border-dark {
+  border-color: var(--color-border-dark);
+}
+
+.gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.gradient-secondary {
+  background: var(--gradient-secondary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-geist-sans, Arial, Helvetica, sans-serif);
 }
